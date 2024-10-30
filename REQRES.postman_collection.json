@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "0ef4151d-77b9-4170-b6c7-6a53901d696e",
+		"name": "REQRES",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27288555",
+		"_collection_link": "https://ndito-ino.postman.co/workspace/ndito-ino-Workspace~911dacaf-67c0-458a-af9b-484681bc1c2c/collection/27288555-0ef4151d-77b9-4170-b6c7-6a53901d696e?action=share&source=collection_link&creator=27288555"
+	},
+	"item": [
+		{
+			"name": "GET LIST USER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{req}}/api/users?page=2",
+					"host": [
+						"{{req}}"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get single",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{req}}/api/users/2",
+					"host": [
+						"{{req}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "single resourse",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{req}}/api/unknown/2",
+					"host": [
+						"{{req}}"
+					],
+					"path": [
+						"api",
+						"unknown",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"rockzy1@yahoo.com\",\r\n    \"password\": \"mbotty\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{req}}/api/register",
+					"host": [
+						"{{req}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"mboutidem\",\r\n    \"job\": \"pupil\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{req}}/api/users",
+					"host": [
+						"{{req}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"idiokudo\",\r\n    \"job\": \"aso rock\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{req}}/api/users/2",
+					"host": [
+						"{{req}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{req}}/api/users/1?id=547",
+					"host": [
+						"{{req}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"1"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "547"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "req",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
